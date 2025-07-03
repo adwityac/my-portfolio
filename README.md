@@ -4,7 +4,7 @@ A modern portfolio app inspired by the Ubuntu desktop environment. This app show
 
 ### Live Demo:
 
-[Check out the live version here!](https://ubuntu-portfolio-two.vercel.app/)
+[Check out the live version here!](https://adwityac.vercel.app/)
 
 ## ✨ Features
 
