@@ -6,6 +6,7 @@ import {
   VSCode,
   Terminal,
   Spotify,
+  Settings,
   AboutMe,
   Calculator,
 } from '@/components/apps';
@@ -131,7 +132,7 @@ const initialState: AllAppsState[] = [
     imageSrc: '/apps/gnome-control-center.png',
     isFavorite: true,
     isOpen: false,
-    app: Chrome,
+    app: Settings,
     isMinimized: false,
     position: {
       x: 0,
