@@ -4,13 +4,13 @@ const About = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
   return (
     <div className="my-6 flex items-center justify-center">
-      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-orange-600 shadow-md">
+      <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-orange-600 shadow-lg bg-[#0b0b0b]">
         <Image
           src="/myImage.jpg"
           alt="Adwitya"
           fill
-          className="object-cover object-top"
-          sizes="(max-width: 768px) 128px, 160px"
+          className="object-contain object-top scale-110"
+          sizes="(max-width: 768px) 144px, 176px"
           priority
         />
       </div>
