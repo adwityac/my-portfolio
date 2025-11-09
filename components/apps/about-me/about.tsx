@@ -41,21 +41,23 @@ const About = () => {
             real-world problems through technology
           </span>
           . Here are my key specializations:
-          <ul className="mt-4 w-5/6 md:w-3/4 text-sm md:text-base leading-tight tracking-tight list-disc list-inside space-y-2">
+          <ul className="mt-4 w-5/6 list-inside list-disc space-y-2 text-sm leading-tight tracking-tight md:w-3/4 md:text-base">
             <li>
               <span className="text-orange-600">Continuous Improvement:</span>{' '}
               Committed to learning and adapting to new technologies.
             </li>
             <li>
-              <span className="text-orange-600">Passionate about Innovation:</span>{' '}
-              Enjoy working with the latest tools to develop innovative solutions.
+              <span className="text-orange-600">
+                Passionate about Innovation:
+              </span>{' '}
+              Enjoy working with the latest tools to develop innovative
+              solutions.
             </li>
             <li>
               <span className="text-orange-600">Problem Solver at Heart:</span>{' '}
               Embrace challenges that push me to grow and improve.
             </li>
-      </ul>
-
+          </ul>
         </li>
       </ul>
     </div>
