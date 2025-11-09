@@ -4,7 +4,7 @@ const About = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
   return (
     <div className="my-6 flex items-center justify-center">
-      <div className="relative w-40 h-56 md:w-48 md:h-64 overflow-hidden rounded-xl shadow-lg border border-orange-600">
+      <div className="relative h-56 w-40 overflow-hidden rounded-xl border border-orange-600 shadow-lg md:h-64 md:w-48">
         <Image
           src="/myImage.jpg"
           alt="Adwitya"
