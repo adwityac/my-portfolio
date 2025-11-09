@@ -4,13 +4,14 @@ const About = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="my-4 w-20  md:w-28">
+      <div className="my-4 w-24 h-24 md:w-36 md:h-36 relative">
         <Image
           src="/myImage.jpg"
           alt="Adwitya"
-          className="w-full rounded-full"
-          height={300}
-          width={500}
+          fill
+          className="rounded-full object-cover"
+          sizes="(max-width: 768px) 96px, 144px"
+          priority
         />
       </div>
       <div className="mb-6 mt-4 px-1 text-center text-lg md:mt-8 md:text-2xl">
@@ -28,7 +29,7 @@ const About = () => {
           <span className="font-medium">
             driven by a love for clean, concise code, and always exploring new
             technologies to expand my skill set.
-          </span>
+          </span>{' '}
           I am committed to continuously enhancing my skills to effectively
           solve{' '}
           <span className="text-orange-600">
@@ -45,7 +46,7 @@ const About = () => {
                 Passionate about Innovation:
               </span>{' '}
               Enjoy working with the latest tools to develop innovative
-              solutions .
+              solutions.
             </li>
             <li>
               <span className="text-orange-600">Problem Solver at Heart:</span>{' '}
