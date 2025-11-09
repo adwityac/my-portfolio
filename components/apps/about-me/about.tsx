@@ -3,14 +3,14 @@ import Image from 'next/image';
 const About = () => {
   const yearsOfExperience = new Date().getFullYear() - 2021;
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="my-4 w-24 h-24 md:w-36 md:h-36 relative">
+    <div className="my-6 flex items-center justify-center">
+      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-orange-600 shadow-md">
         <Image
           src="/myImage.jpg"
           alt="Adwitya"
           fill
-          className="rounded-full object-cover"
-          sizes="(max-width: 768px) 96px, 144px"
+          className="object-cover object-top"
+          sizes="(max-width: 768px) 128px, 160px"
           priority
         />
       </div>
