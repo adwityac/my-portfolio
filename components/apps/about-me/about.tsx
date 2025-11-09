@@ -41,25 +41,24 @@ const About = () => {
       </p>
 
       {/* Key Points List */}
-        <li>
-          <span className="font-semibold text-orange-600">
-            ⚙️ Continuous Improvement:
-          </span>{' '}
-          Committed to learning and adapting to new technologies.
-        </li>
-        <li>
-          <span className="font-semibold text-orange-600">
-            💡 Passionate about Innovation:
-          </span>{' '}
-          Enjoy working with the latest tools to develop innovative solutions.
-        </li>
-        <li>
-          <span className="font-semibold text-orange-600">
-            🧩 Problem Solver at Heart:
-          </span>{' '}
-          Embrace challenges that push me to grow and improve.
-        </li>
-    
+      <li>
+        <span className="font-semibold text-orange-600">
+          ⚙️ Continuous Improvement:
+        </span>{' '}
+        Committed to learning and adapting to new technologies.
+      </li>
+      <li>
+        <span className="font-semibold text-orange-600">
+          💡 Passionate about Innovation:
+        </span>{' '}
+        Enjoy working with the latest tools to develop innovative solutions.
+      </li>
+      <li>
+        <span className="font-semibold text-orange-600">
+          🧩 Problem Solver at Heart:
+        </span>{' '}
+        Embrace challenges that push me to grow and improve.
+      </li>
     </div>
   );
 };
