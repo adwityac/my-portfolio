@@ -41,7 +41,6 @@ const About = () => {
       </p>
 
       {/* Key Points List */}
-      <ul className="mt-4 w-5/6 list-none space-y-3 text-sm leading-relaxed tracking-tight text-gray-200 md:w-3/4 md:text-base">
         <li>
           <span className="font-semibold text-orange-600">
             ⚙️ Continuous Improvement:
@@ -60,7 +59,7 @@ const About = () => {
           </span>{' '}
           Embrace challenges that push me to grow and improve.
         </li>
-      </ul>
+    
     </div>
   );
 };
