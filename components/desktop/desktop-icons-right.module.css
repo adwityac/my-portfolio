@@ -1,0 +1,25 @@
+.container {
+  position: fixed;
+  right: 24px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  z-index: 2000;
+}
+
+.icon {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.icon:hover {
+  opacity: 0.85;
+}
