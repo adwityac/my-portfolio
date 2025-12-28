@@ -1,6 +1,15 @@
 # Ubuntu Portfolio
-
+<p align="center">
 A modern portfolio app inspired by the Ubuntu desktop environment. This app showcases your work, skills, and experience with an intuitive and visually appealing design.
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-14+-black?logo=next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-Frontend-blue?logo=typescript" />
+  <img src="https://img.shields.io/badge/TailwindCSS-Styling-38BDF8?logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Vercel-Hosting-black?logo=vercel" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative" />
+</p>
+
 
 ### Live Demo:
 
