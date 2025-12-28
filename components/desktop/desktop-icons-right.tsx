@@ -12,7 +12,7 @@ export default function DesktopIconsRight() {
     <div className={styles.container}>
       {/* Trash */}
       <div className={styles.icon}>
-        <Image src="/apps/trash.png" alt="Trash" width={48} height={48} />
+        <Image src="/images/trash.png" alt="Trash" width={48} height={48} />
         <span>Trash</span>
       </div>
 
@@ -22,7 +22,7 @@ export default function DesktopIconsRight() {
         onClick={() => dispatch(openAppByTitle('contact-me'))}
       >
         <Image
-          src="/public/images/gedit.png"
+          src="/images/gedit.png"
           alt="Contact Me"
           width={48}
           height={48}
@@ -38,7 +38,7 @@ export default function DesktopIconsRight() {
         rel="noreferrer"
       >
         <Image
-          src="/public/images/github.png"
+          src="/images/github.png"
           alt="GitHub"
           width={48}
           height={48}
@@ -52,7 +52,7 @@ export default function DesktopIconsRight() {
         onClick={() => dispatch(openAppByTitle('terminal'))}
       >
         <Image
-          src="/public/images/tars.svg"
+          src="/images/tars.svg"
           alt="Ask Tars"
           width={48}
           height={48}
