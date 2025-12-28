@@ -19,7 +19,7 @@ export default function DesktopIconsRight() {
       {/* Contact Me */}
       <button
         className={styles.icon}
-        onClick={() => dispatch(openAppByTitle('about-me'))}
+        onClick={() => dispatch(openAppByTitle('contact-me'))}
       >
         <Image
           src="/public/images/gedit.png"
@@ -37,7 +37,12 @@ export default function DesktopIconsRight() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image src="/public/images/github.png" alt="GitHub" width={48} height={48} />
+        <Image
+          src="/public/images/github.png"
+          alt="GitHub"
+          width={48}
+          height={48}
+        />
         <span>GitHub</span>
       </a>
 
@@ -46,7 +51,12 @@ export default function DesktopIconsRight() {
         className={styles.icon}
         onClick={() => dispatch(openAppByTitle('terminal'))}
       >
-        <Image src="/public/images/tars.svg" alt="Ask Tars" width={48} height={48} />
+        <Image
+          src="/public/images/tars.svg"
+          alt="Ask Tars"
+          width={48}
+          height={48}
+        />
         <span>Ask Tars</span>
       </button>
     </div>

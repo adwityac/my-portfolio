@@ -1,4 +1,5 @@
 # Ubuntu Portfolio
+
 <p align="center">
 A modern portfolio app inspired by the Ubuntu desktop environment. This app showcases your work, skills, and experience with an intuitive and visually appealing design.
 </p>
@@ -9,7 +10,6 @@ A modern portfolio app inspired by the Ubuntu desktop environment. This app show
   <img src="https://img.shields.io/badge/Vercel-Hosting-black?logo=vercel" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative" />
 </p>
-
 
 ### Live Demo:
 
