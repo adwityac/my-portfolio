@@ -40,7 +40,7 @@
 }
 
 .editor input,
-.editor textarea  {
+.editor textarea {
   flex: 1;
   background: transparent;
   border: none;
@@ -50,7 +50,7 @@
   font-size: 14px;
 }
 
-textarea {
+.editor textarea {
   min-height: 120px;
   resize: none;
 }
