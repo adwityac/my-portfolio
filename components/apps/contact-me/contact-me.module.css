@@ -1,0 +1,38 @@
+.container {
+  height: 100%;
+  background: linear-gradient(#031c30, #021528);
+  color: #cfe8ff;
+  font-family: monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #0a2d4d;
+  border-bottom: 1px solid #1e4b6f;
+}
+
+.header button {
+  background: #0b3c66;
+  color: white;
+  border: 1px solid #1e4b6f;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.body {
+  padding: 12px;
+}
+
+.line {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.number {
+  color: #4fc3f7;
+}

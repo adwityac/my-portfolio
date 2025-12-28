@@ -40,8 +40,6 @@ export default function DesktopIconsRight() {
         <Image src="/images/github.png" alt="GitHub" width={48} height={48} />
         <span>GitHub</span>
       </a>
-
-      
     </div>
   );
 }
