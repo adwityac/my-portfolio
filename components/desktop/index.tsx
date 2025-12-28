@@ -3,7 +3,6 @@ import { Sidebar } from '@/components/sidebar';
 import { useAppSelector } from '@/redux/hooks';
 import DesktopIconsRight from '@/components/desktop/desktop-icons-right';
 
-
 interface DesktopProps {}
 
 const Desktop = ({}: DesktopProps) => {
