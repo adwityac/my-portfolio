@@ -143,7 +143,7 @@ const initialState: AllAppsState[] = [
     zIndex: 0,
   },
 
-    {
+  {
     id: _.uniqueId(),
     title: 'Contact Me',
     slug: 'contact-me',

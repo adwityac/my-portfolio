@@ -23,16 +23,39 @@
   cursor: pointer;
 }
 
-.body {
+.editor {
   padding: 12px;
 }
 
 .line {
   display: flex;
+  align-items: flex-start;
   gap: 12px;
   margin-bottom: 10px;
 }
 
-.number {
+.lineNumber {
   color: #4fc3f7;
+  width: 20px;
+}
+
+input,
+textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #cfe8ff;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #7aa7c7;
 }
