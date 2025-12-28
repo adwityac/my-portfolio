@@ -37,28 +37,11 @@ export default function DesktopIconsRight() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
-          src="/images/github.png"
-          alt="GitHub"
-          width={48}
-          height={48}
-        />
+        <Image src="/images/github.png" alt="GitHub" width={48} height={48} />
         <span>GitHub</span>
       </a>
 
-      {/* Ask Tars */}
-      <button
-        className={styles.icon}
-        onClick={() => dispatch(openAppByTitle('terminal'))}
-      >
-        <Image
-          src="/images/tars.svg"
-          alt="Ask Tars"
-          width={48}
-          height={48}
-        />
-        <span>Ask Tars</span>
-      </button>
+      
     </div>
   );
 }
