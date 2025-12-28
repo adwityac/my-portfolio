@@ -2,7 +2,7 @@
 
 import styles from './contact-me.module.css';
 
-export function AboutMe() {
+export function ContactMe() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -28,4 +28,8 @@ export function AboutMe() {
       </div>
     </div>
   );
+
+  
 }
+
+

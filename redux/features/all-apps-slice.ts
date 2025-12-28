@@ -9,6 +9,7 @@ import {
   Settings,
   AboutMe,
   Calculator,
+  ContactMe,
 } from '@/components/apps';
 
 interface AllAppsState {
@@ -133,6 +134,23 @@ const initialState: AllAppsState[] = [
     isFavorite: true,
     isOpen: false,
     app: Settings,
+    isMinimized: false,
+    position: {
+      x: 0,
+      y: 0,
+    },
+    maximized: false,
+    zIndex: 0,
+  },
+
+    {
+    id: _.uniqueId(),
+    title: 'Contact Me',
+    slug: 'contact-me',
+    imageSrc: '/images/gedit.png',
+    isFavorite: true,
+    isOpen: false,
+    app: ContactMe,
     isMinimized: false,
     position: {
       x: 0,
