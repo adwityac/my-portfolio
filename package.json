@@ -18,6 +18,7 @@
     "clean": "npx rimraf .next node_modules"
   },
   "dependencies": {
+    "@react-email/render": "^2.0.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",

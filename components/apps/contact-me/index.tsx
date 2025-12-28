@@ -9,17 +9,16 @@ export function ContactMe() {
   const [message, setMessage] = useState('');
 
   const handleSend = async () => {
-  await fetch('/api/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, subject, message }),
-  });
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, subject, message }),
+    });
 
-  setEmail('');
-  setSubject('');
-  setMessage('');
-};
-
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
 
   return (
     <div className={styles.container}>

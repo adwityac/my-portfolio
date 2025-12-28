@@ -39,8 +39,8 @@
   width: 20px;
 }
 
-input,
-textarea {
+.editor input,
+.editor textarea  {
   flex: 1;
   background: transparent;
   border: none;
@@ -55,7 +55,7 @@ textarea {
   resize: none;
 }
 
-input::placeholder,
-textarea::placeholder {
+.editor input::placeholder,
+.editor textarea::placeholder {
   color: #7aa7c7;
 }
