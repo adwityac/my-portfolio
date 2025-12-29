@@ -28,15 +28,16 @@ export const ShowApplications = () => {
           className="
       w-full max-w-xl
       rounded-full px-5 py-2
-      text-sm sm:text-base
-      text-black outline-none
+      text-sm text-black
+      outline-none sm:text-base
     "
           autoFocus
         />
       </div>
 
       {/* Apps grid */}
-      <div className="
+      <div
+        className="
             mx-auto mt-8
             grid
             grid-cols-3
@@ -44,11 +45,12 @@ export const ShowApplications = () => {
             px-4
             text-center text-white
             sm:grid-cols-4
+            md:mt-10
             md:grid-cols-6
             md:gap-10
             md:px-0
-            md:mt-10
-          ">
+          "
+      >
         {filteredApps.map((app) => (
           <div
             key={app.id}
@@ -58,10 +60,16 @@ export const ShowApplications = () => {
               dispatch(closeApplications());
             }}
           >
-            <Image src={app.imageSrc} alt={app.title} width={64} height={64} className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16" />
-            <span className="text-xs sm:text-sm leading-tight">
-  {app.title}
-</span>
+            <Image
+              src={app.imageSrc}
+              alt={app.title}
+              width={64}
+              height={64}
+              className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
+            />
+            <span className="text-xs leading-tight sm:text-sm">
+              {app.title}
+            </span>
           </div>
         ))}
       </div>

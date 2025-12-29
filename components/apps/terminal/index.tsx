@@ -234,7 +234,7 @@ const Terminal = ({ id }: TerminalProps) => {
             <span className="mr-1 font-bold text-white">$</span>
             <input
               type="text"
-               className="w-full bg-transparent text-white outline-none"
+              className="w-full bg-transparent text-white outline-none"
               value={row.text}
               onChange={(e) => onChange(e, index)}
               onKeyDown={(e) => onKeyDown(e, index)}
