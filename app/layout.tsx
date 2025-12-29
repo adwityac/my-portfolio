@@ -19,8 +19,7 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: 'Adwitya | Ubuntu 22.04',
-  description:
-    'Welcome to Adwitya’s portfolio! ',
+  description: 'Welcome to Adwitya’s portfolio! ',
 };
 
 export default function RootLayout({
