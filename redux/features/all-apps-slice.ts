@@ -10,6 +10,7 @@ import {
   AboutMe,
   Calculator,
   ContactMe,
+  Trash,
 } from '@/components/apps';
 
 interface AllAppsState {
@@ -148,7 +149,7 @@ const initialState: AllAppsState[] = [
     title: 'Contact Me',
     slug: 'contact-me',
     imageSrc: '/images/gedit.png',
-    isFavorite: true,
+    isFavorite: false,
     isOpen: false,
     app: ContactMe,
     isMinimized: false,
@@ -159,6 +160,21 @@ const initialState: AllAppsState[] = [
     maximized: false,
     zIndex: 0,
   },
+
+  {
+  id: _.uniqueId(),
+  title: 'Trash',
+  slug: 'trash',
+  imageSrc: '/images/user-trash-full.png',
+  isFavorite: false,
+  isOpen: false,
+  app: Trash,
+  isMinimized: false,
+  position: { x: 0, y: 0 },
+  maximized: false,
+  zIndex: 0,
+},
+
 ];
 
 export const appApps = createSlice({
@@ -182,6 +198,15 @@ export const appApps = createSlice({
       if (findApp) {
         findApp.isOpen = true;
         findApp.isMinimized = false;
+
+      if (findApp.slug === 'trash') {
+      findApp.position = { x: 40, y: 80 };
+      }
+
+      if (findApp.slug === 'contact-me') {
+      findApp.position = { x: 40, y: 80 };
+      }
+
       }
     },
     closeApp: (state, action: PayloadAction<string>) => {

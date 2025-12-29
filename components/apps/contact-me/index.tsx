@@ -25,7 +25,7 @@ export function ContactMe() {
       {/* Header */}
       <div className={styles.header}>
         <span>Send a Message to Me</span>
-        <button>Send</button>
+        <button onClick={handleSend}>Send</button>
       </div>
 
       {/* Editor body */}

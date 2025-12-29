@@ -7,6 +7,7 @@ interface ClockProps {}
 const Clock = ({}: ClockProps) => {
   const [time, setTime] = useState(new Date());
 
+  const day = time.toLocaleString('default', { weekday: 'short' });
   const month = time.toLocaleString('default', { month: 'short' });
   const date = time.getDate();
   const timeAMPM = time.toLocaleString('en-US', {
@@ -23,7 +24,7 @@ const Clock = ({}: ClockProps) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return <div>{`${month} ${date} ${timeAMPM}`}</div>;
+  return <div>{`${day} ${month} ${date} ${timeAMPM}`}</div>;
 };
 
 export { Clock };

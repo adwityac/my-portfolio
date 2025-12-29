@@ -2,15 +2,29 @@ import { Grid } from '@/components/icons';
 import { SidebarMenuItem } from '@/components/sidebar-menu-item';
 import { Tooltip } from '@/components/tooltip';
 import { useAppSelector } from '@/redux/hooks';
+import { toggleApplications } from '@/redux/features/ui-slice';
+import { useAppDispatch } from '@/redux/hooks';
+
+
 
 interface SidebarProps {}
 
 const Sidebar = ({}: SidebarProps) => {
-  const favoriteApps = useAppSelector((state) => state.allApps);
+  const sidebarApps = useAppSelector((state) =>
+  state.allApps.filter(
+    (app) =>
+      app.isFavorite ||
+      (app.isOpen &&
+        (app.slug === 'trash' || app.slug === 'contact-me'))
+  )
+);
+
+const dispatch = useAppDispatch();
+
 
   return (
     <div className="absolute left-0 top-0 z-40 flex h-full w-auto transform select-none flex-col items-center justify-start border-black border-opacity-60 bg-black bg-opacity-50 pt-7 duration-300">
-      {favoriteApps.map((item) => (
+      {sidebarApps.map((item) => (
         <Tooltip text={item.title} key={item.id} position="right">
           <SidebarMenuItem
             title={item.title}
@@ -25,7 +39,8 @@ const Sidebar = ({}: SidebarProps) => {
         style={{ marginTop: 'auto' }}
       >
         <Tooltip position="top" text="Show Applications">
-          <div className="relative">
+          <div className="relative cursor-pointer"onClick={() => dispatch(toggleApplications())}>
+
             <Grid />
           </div>
         </Tooltip>

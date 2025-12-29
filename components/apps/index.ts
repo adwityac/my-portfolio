@@ -6,3 +6,4 @@ export { AboutMe } from './about-me';
 export { Calculator } from './calculator';
 export { Settings } from './settings';
 export { ContactMe } from './contact-me';
+export { Trash } from './trash';
