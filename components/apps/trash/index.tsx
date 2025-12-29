@@ -28,12 +28,22 @@ export function Trash() {
         </div>
 
         <div className={styles.item}>
-          <Image src="/images/folder.png" alt="project_final" width={48} height={48} />
+          <Image
+            src="/images/folder.png"
+            alt="project_final"
+            width={48}
+            height={48}
+          />
           <span>project_final</span>
         </div>
 
         <div className={styles.item}>
-          <Image src="/images/zip.png" alt="assignment.zip" width={48} height={48} />
+          <Image
+            src="/images/zip.png"
+            alt="assignment.zip"
+            width={48}
+            height={48}
+          />
           <span>18BCP127 assignment name.zip</span>
         </div>
       </div>

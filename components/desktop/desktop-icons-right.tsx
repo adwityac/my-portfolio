@@ -10,28 +10,25 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 export default function DesktopIconsRight() {
   const dispatch = useAppDispatch();
-    const showStatusMenu = useAppSelector(
-    (state) => state.ui.showStatusMenu
-  );
+  const showStatusMenu = useAppSelector((state) => state.ui.showStatusMenu);
 
-    if (showStatusMenu) return null; 
+  if (showStatusMenu) return null;
 
   return (
     <div className={styles.container}>
       {/* Trash */}
       <button
-  className={styles.icon}
-  onClick={() => dispatch(openAppByTitle('trash'))}
->
-  <Image
-    src="/images/user-trash-full.png"
-    alt="Trash"
-    width={48}
-    height={48}
-  />
-  <span>Trash</span>
-</button>
-
+        className={styles.icon}
+        onClick={() => dispatch(openAppByTitle('trash'))}
+      >
+        <Image
+          src="/images/user-trash-full.png"
+          alt="Trash"
+          width={48}
+          height={48}
+        />
+        <span>Trash</span>
+      </button>
 
       {/* Contact Me */}
       <button
@@ -55,12 +52,9 @@ export default function DesktopIconsRight() {
         rel="noreferrer"
       >
         <Image src="/images/github.png" alt="GitHub" width={48} height={48} />
-          <ArrowTopRightOnSquareIcon
-    className="absolute -bottom-1 -right-1 h-4 w-4 text-white"
-  />
+        <ArrowTopRightOnSquareIcon className="absolute -bottom-1 -right-1 h-4 w-4 text-white" />
         <span>GitHub</span>
       </a>
-
     </div>
   );
 }

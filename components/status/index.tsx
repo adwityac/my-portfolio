@@ -8,10 +8,11 @@ interface StatusProps {}
 const Status = ({}: StatusProps) => {
   const dispatch = useAppDispatch();
   return (
-    <div className="flex items-center gap-2"
+    <div
+      className="flex items-center gap-2"
       onClick={() => {
-        dispatch(closeApplications());   
-        dispatch(toggleStatusMenu());    
+        dispatch(closeApplications());
+        dispatch(toggleStatusMenu());
       }}
     >
       <Wifi />

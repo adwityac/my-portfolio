@@ -10,8 +10,7 @@ interface SectionProps {
 const Section = ({ title, items }: SectionProps) => {
   return (
     <div>
-      <div
-        className="mb-2 text-xl font-extrabold text-white md:text-center">
+      <div className="mb-2 text-xl font-extrabold text-white md:text-center">
         {title}
       </div>
       <div className="flex flex-wrap gap-4 md:items-center md:justify-center">
@@ -45,25 +44,15 @@ const Skills = () => {
               <span className="text-orange-600"> Golang</span> , and{' '}
               <span className="text-orange-600"> Redis</span>.
             </li>
-           
-            
+
             <li>
               I have hands-on experience with a broad range of technologies:
             </li>
           </ul>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-            <Section
-              title="Frontend"
-              items={frontend}
-            />
-            <Section
-              title="Backend"
-              items={backend}
-            />
-            <Section
-              title="Database & OS"
-              items={databaseCloud}
-            />
+            <Section title="Frontend" items={frontend} />
+            <Section title="Backend" items={backend} />
+            <Section title="Database & OS" items={databaseCloud} />
           </div>
         </div>
       </div>

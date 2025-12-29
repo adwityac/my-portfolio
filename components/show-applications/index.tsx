@@ -14,7 +14,7 @@ export const ShowApplications = () => {
 
   // 🔍 Filter apps based on search
   const filteredApps = apps.filter((app) =>
-    app.title.toLowerCase().includes(search.toLowerCase())
+    app.title.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (
@@ -41,12 +41,7 @@ export const ShowApplications = () => {
               dispatch(closeApplications());
             }}
           >
-            <Image
-              src={app.imageSrc}
-              alt={app.title}
-              width={64}
-              height={64}
-            />
+            <Image src={app.imageSrc} alt={app.title} width={64} height={64} />
             <span className="text-sm">{app.title}</span>
           </div>
         ))}

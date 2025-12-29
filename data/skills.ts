@@ -1,7 +1,6 @@
 import _ from 'lodash';
 
 export const frontend = [
-
   {
     id: _.uniqueId(),
     name: 'React',
@@ -49,13 +48,13 @@ export const backend = [
     image:
       'https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white&labelColor=FF6C37&color=FF6C37',
   },
-   {
+  {
     id: _.uniqueId(),
     name: 'Go',
     image:
       'https://img.shields.io/badge/-Golang-007ACC?style=flat&logo=go&logoColor=white&labelColor=007ACC&color=007ACC',
   },
-   {
+  {
     id: _.uniqueId(),
     name: 'Redis',
     image:
@@ -67,7 +66,6 @@ export const backend = [
     image:
       'https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white&labelColor=3776AB&color=3776AB',
   },
-  
 ];
 
 export const databaseCloud = [

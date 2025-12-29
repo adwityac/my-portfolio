@@ -162,19 +162,18 @@ const initialState: AllAppsState[] = [
   },
 
   {
-  id: _.uniqueId(),
-  title: 'Trash',
-  slug: 'trash',
-  imageSrc: '/images/user-trash-full.png',
-  isFavorite: false,
-  isOpen: false,
-  app: Trash,
-  isMinimized: false,
-  position: { x: 0, y: 0 },
-  maximized: false,
-  zIndex: 0,
-},
-
+    id: _.uniqueId(),
+    title: 'Trash',
+    slug: 'trash',
+    imageSrc: '/images/user-trash-full.png',
+    isFavorite: false,
+    isOpen: false,
+    app: Trash,
+    isMinimized: false,
+    position: { x: 0, y: 0 },
+    maximized: false,
+    zIndex: 0,
+  },
 ];
 
 export const appApps = createSlice({
@@ -199,14 +198,13 @@ export const appApps = createSlice({
         findApp.isOpen = true;
         findApp.isMinimized = false;
 
-      if (findApp.slug === 'trash') {
-      findApp.position = { x: 40, y: 80 };
-      }
+        if (findApp.slug === 'trash') {
+          findApp.position = { x: 40, y: 80 };
+        }
 
-      if (findApp.slug === 'contact-me') {
-      findApp.position = { x: 40, y: 80 };
-      }
-
+        if (findApp.slug === 'contact-me') {
+          findApp.position = { x: 40, y: 80 };
+        }
       }
     },
     closeApp: (state, action: PayloadAction<string>) => {

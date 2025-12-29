@@ -5,22 +5,18 @@ import { useAppSelector } from '@/redux/hooks';
 import { toggleApplications } from '@/redux/features/ui-slice';
 import { useAppDispatch } from '@/redux/hooks';
 
-
-
 interface SidebarProps {}
 
 const Sidebar = ({}: SidebarProps) => {
   const sidebarApps = useAppSelector((state) =>
-  state.allApps.filter(
-    (app) =>
-      app.isFavorite ||
-      (app.isOpen &&
-        (app.slug === 'trash' || app.slug === 'contact-me'))
-  )
-);
+    state.allApps.filter(
+      (app) =>
+        app.isFavorite ||
+        (app.isOpen && (app.slug === 'trash' || app.slug === 'contact-me')),
+    ),
+  );
 
-const dispatch = useAppDispatch();
-
+  const dispatch = useAppDispatch();
 
   return (
     <div className="absolute left-0 top-0 z-40 flex h-full w-auto transform select-none flex-col items-center justify-start border-black border-opacity-60 bg-black bg-opacity-50 pt-7 duration-300">
@@ -39,8 +35,10 @@ const dispatch = useAppDispatch();
         style={{ marginTop: 'auto' }}
       >
         <Tooltip position="top" text="Show Applications">
-          <div className="relative cursor-pointer"onClick={() => dispatch(toggleApplications())}>
-
+          <div
+            className="relative cursor-pointer"
+            onClick={() => dispatch(toggleApplications())}
+          >
             <Grid />
           </div>
         </Tooltip>
