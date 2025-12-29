@@ -8,6 +8,7 @@ import { Navbar } from './navbar';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { changePosition, zIndexApp } from '@/redux/features/all-apps-slice';
 
+
 interface WindowProps {
   id: string;
   title: string;
@@ -28,6 +29,7 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
 
   const handleStart: DraggableEventHandler = () => {
     setIsDragging(true);
+    dispatch(zIndexApp(id)); 
   };
 
   const handleDrag: DraggableEventHandler = (e, ui) => {
@@ -78,9 +80,8 @@ const Window = ({ id, title, children, zIndex }: WindowProps) => {
           height: app?.maximized ? 'calc(100vh - 32px)' : '',
           zIndex: app?.zIndex,
         }}
-        onClick={(e) => {
-          dispatch(zIndexApp(id));
-        }}
+    
+        
       >
         <Navbar
           title={title}
