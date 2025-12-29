@@ -12,7 +12,6 @@ export default function DesktopIconsRight() {
   const dispatch = useAppDispatch();
   const showStatusMenu = useAppSelector((state) => state.ui.showStatusMenu);
 
-  if (showStatusMenu) return null;
 
   return (
     <div className={styles.container}>

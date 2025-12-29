@@ -5,21 +5,23 @@ interface StatusState {
   brightnessLevel: number;
 }
 
-const initialState = {
+const MIN_BRIGHTNESS = 5; // 👈 never fully black
+
+const initialState: StatusState = {
   soundLevel: 50,
   brightnessLevel: 100,
-} as StatusState;
+};
 
 export const status = createSlice({
   name: 'status',
   initialState,
   reducers: {
     setSoundLevel: (state, action: PayloadAction<number>) => {
-      state.soundLevel = action.payload;
+      state.soundLevel = Math.max(0, Math.min(100, action.payload));
     },
 
     setBrightnessLevel: (state, action: PayloadAction<number>) => {
-      state.brightnessLevel = action.payload;
+      state.brightnessLevel = Math.max(MIN_BRIGHTNESS, action.payload);
     },
   },
 });

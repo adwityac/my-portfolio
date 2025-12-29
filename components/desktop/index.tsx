@@ -7,12 +7,18 @@ import { BootScreen } from '@/components/boot-screen';
 import { StatusCard } from '@/components/status-card';
 import { useEffect, useState } from 'react';
 
+
 interface DesktopProps {}
 
 const Desktop = ({}: DesktopProps) => {
   const { backgroundImage } = useAppSelector((state) => state.backgroundImage);
   const showApps = useAppSelector((state) => state.ui.showApplications);
   const [booting, setBooting] = useState(true);
+
+  const brightnessLevel = useAppSelector(
+  (state) => state.status.brightnessLevel
+);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,6 +38,13 @@ const Desktop = ({}: DesktopProps) => {
       <Sidebar />
       <DesktopIconsRight />
       {showApps && <ShowApplications />}
+
+      <div
+  className="fixed inset-0 z-[9999] bg-black pointer-events-none transition-opacity duration-300"
+  style={{
+     opacity: Math.min(0.85, 1 - brightnessLevel / 100),
+  }}
+/>
     </div>
   );
 };
