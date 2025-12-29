@@ -33,9 +33,10 @@ export const Settings = () => {
   const [active, setActive] = useState('Appearance');
 
   return (
-    <div className="flex h-full w-full select-none overflow-hidden rounded-lg bg-[#1E1E1E] text-gray-200">
+    <div className="flex h-full w-full flex-col md:flex-row select-none overflow-hidden rounded-lg bg-[#1E1E1E] text-gray-200">
+
       {/* Sidebar */}
-      <aside className="flex w-60 flex-col border-r border-gray-700 bg-[#2B2B2B] p-2">
+      <aside className="flex w-full md:w-60 flex-col border-b md:border-b-0 md:border-r border-gray-700 bg-[#2B2B2B] p-2 max-h-[40vh] md:max-h-none overflow-y-auto">
         <h1 className="mb-2 px-4 py-3 text-lg font-semibold">Settings</h1>
         <nav className="scrollbar-none flex flex-col space-y-1 overflow-y-auto">
           {sections.map((s) => (
@@ -56,7 +57,7 @@ export const Settings = () => {
       </aside>
 
       {/* Main Panel */}
-      <main className="flex-1 overflow-y-auto bg-[#2E2E2E] p-6">
+      <main className="flex-1 overflow-y-auto bg-[#2E2E2E] p-4 md:p-6">
         <h2 className="mb-6 text-xl font-semibold">{active}</h2>
 
         {active === 'Appearance' && (
@@ -75,7 +76,7 @@ export const Settings = () => {
 
             <section>
               <h3 className="mb-2 text-lg font-medium">Wallpaper</h3>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 <div className="h-24 cursor-pointer rounded-md bg-[url('/images/wall-1.webp')] bg-cover hover:ring-2 hover:ring-blue-500"></div>
                 <div className="h-24 cursor-pointer rounded-md bg-[url('/images/wall-2.webp')] bg-cover hover:ring-2 hover:ring-blue-500"></div>
                 <div className="h-24 cursor-pointer rounded-md bg-[url('/images/wall-3.webp')] bg-cover hover:ring-2 hover:ring-blue-500"></div>

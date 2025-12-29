@@ -20,18 +20,35 @@ export const ShowApplications = () => {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-70 backdrop-blur-md">
       {/* Search bar */}
-      <div className="flex justify-center pt-6">
+      <div className="flex justify-center px-4 pt-6">
         <input
           placeholder="Type to Search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-1/2 rounded-full px-5 py-2 text-black outline-none"
+          className="
+      w-full max-w-xl
+      rounded-full px-5 py-2
+      text-sm sm:text-base
+      text-black outline-none
+    "
           autoFocus
         />
       </div>
 
       {/* Apps grid */}
-      <div className="mx-auto mt-10 grid max-w-5xl grid-cols-6 gap-10 text-center text-white">
+      <div className="
+            mx-auto mt-8
+            grid
+            grid-cols-3
+            gap-6
+            px-4
+            text-center text-white
+            sm:grid-cols-4
+            md:grid-cols-6
+            md:gap-10
+            md:px-0
+            md:mt-10
+          ">
         {filteredApps.map((app) => (
           <div
             key={app.id}
@@ -41,8 +58,10 @@ export const ShowApplications = () => {
               dispatch(closeApplications());
             }}
           >
-            <Image src={app.imageSrc} alt={app.title} width={64} height={64} />
-            <span className="text-sm">{app.title}</span>
+            <Image src={app.imageSrc} alt={app.title} width={64} height={64} className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16" />
+            <span className="text-xs sm:text-sm leading-tight">
+  {app.title}
+</span>
           </div>
         ))}
       </div>

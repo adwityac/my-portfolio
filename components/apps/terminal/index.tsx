@@ -223,7 +223,7 @@ const Terminal = ({ id }: TerminalProps) => {
   };
 
   return (
-    <div className="h-full w-full bg-gray-950 text-sm font-bold text-white">
+    <div className="h-full w-full bg-[#2c001e] text-sm font-bold text-white">
       {terminalRows.map((row, index) => (
         <Fragment key={index}>
           <div className="mb-1 flex items-center">
@@ -234,7 +234,7 @@ const Terminal = ({ id }: TerminalProps) => {
             <span className="mr-1 font-bold text-white">$</span>
             <input
               type="text"
-              className=" w-full bg-gray-950 text-white outline-none"
+               className="w-full bg-transparent text-white outline-none"
               value={row.text}
               onChange={(e) => onChange(e, index)}
               onKeyDown={(e) => onKeyDown(e, index)}
