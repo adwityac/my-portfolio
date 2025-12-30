@@ -21,7 +21,6 @@ const BackgroundImage = ({
   const brightness =
     minBrightness + normalizedValue * (maxBrightness - minBrightness);
 
-
   return (
     <div
       style={{
