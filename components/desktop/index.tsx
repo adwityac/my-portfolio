@@ -6,6 +6,7 @@ import { Sidebar } from '../sidebar';
 import { BootScreen } from '@/components/boot-screen';
 import { StatusCard } from '@/components/status-card';
 import { useEffect, useState } from 'react';
+import ContextMenu from '@/components/context-menu';
 
 interface DesktopProps {}
 
@@ -17,6 +18,8 @@ const Desktop = ({}: DesktopProps) => {
   const brightnessLevel = useAppSelector(
     (state) => state.status.brightnessLevel,
   );
+
+const [menu, setMenu] = useState<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,20 +34,39 @@ const Desktop = ({}: DesktopProps) => {
   }
 
   return (
-    <div>
-      <BackgroundImage backgroundImage={backgroundImage} />
-      <Sidebar />
-      <DesktopIconsRight />
-      {showApps && <ShowApplications />}
+  <div
+    className="relative h-screen w-screen overflow-hidden"
 
-      <div
-        className="pointer-events-none fixed inset-0 z-[9999] bg-black transition-opacity duration-300"
-        style={{
-          opacity: Math.min(0.85, 1 - brightnessLevel / 100),
-        }}
+    onContextMenu={(e) => {
+      e.preventDefault();
+      setMenu({ x: e.clientX, y: e.clientY });
+    }}
+  >
+    <BackgroundImage backgroundImage={backgroundImage} />
+    <Sidebar />
+    <DesktopIconsRight />
+    
+
+    {/* 🌙 Brightness overlay */}
+    <div
+      className="pointer-events-none fixed inset-0 z-[20] bg-black transition-opacity duration-300"
+      style={{
+        opacity: Math.min(0.85, 1 - brightnessLevel / 100),
+      }}
+    />
+
+    {showApps && <ShowApplications />}
+
+    {/* 🖱️ Right-click context menu */}
+    {menu && (
+      <ContextMenu
+        x={menu.x}
+        y={menu.y}
+        onClose={() => setMenu(null)}
       />
-    </div>
-  );
+    )}
+  </div>
+);
 };
 
 export { Desktop };

@@ -13,6 +13,9 @@ import {
   MousePointer2,
   User,
 } from 'lucide-react';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { setImage } from '@/redux/features/background-image-slice';
+
 
 const sections = [
   { name: 'Display', icon: <Monitor size={18} /> },
@@ -29,8 +32,26 @@ const sections = [
   { name: 'About', icon: <User size={18} /> },
 ];
 
+const wallpapers = [
+  'wall-1.webp',
+  'wall-2.webp',
+  'wall-3.webp',
+  'wall-4.webp',
+  'wall-5.webp',
+  'wall-6.webp',
+  'wall-7.webp',
+  'wall-8.webp',
+];
+
+
 export const Settings = () => {
   const [active, setActive] = useState('Appearance');
+
+  const dispatch = useAppDispatch();
+const currentWallpaper = useAppSelector(
+  (state) => state.backgroundImage.backgroundImage
+);
+
 
   return (
     <div className="flex h-full w-full select-none flex-col overflow-hidden rounded-lg bg-[#1E1E1E] text-gray-200 md:flex-row">
@@ -74,13 +95,28 @@ export const Settings = () => {
             </section>
 
             <section>
-              <h3 className="mb-2 text-lg font-medium">Wallpaper</h3>
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <div className="h-24 cursor-pointer rounded-md bg-[url('/images/wall-1.webp')] bg-cover hover:ring-2 hover:ring-blue-500"></div>
-                <div className="h-24 cursor-pointer rounded-md bg-[url('/images/wall-2.webp')] bg-cover hover:ring-2 hover:ring-blue-500"></div>
-                <div className="h-24 cursor-pointer rounded-md bg-[url('/images/wall-3.webp')] bg-cover hover:ring-2 hover:ring-blue-500"></div>
-              </div>
-            </section>
+  <h3 className="mb-2 text-lg font-medium">Wallpaper</h3>
+
+  <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+    {wallpapers.map((wall) => {
+      const path = `/images/${wall}`;
+      const isActive = currentWallpaper === path;
+
+      return (
+        <div
+          key={wall}
+          onClick={() => dispatch(setImage(path))}
+          className={`w-[232px] h-[168px] cursor-pointer rounded-md
+            bg-cover bg-center transition
+            hover:ring-2 hover:ring-blue-500
+            ${isActive ? 'ring-2 ring-blue-600' : ''}`}
+          style={{ backgroundImage: `url('${path}')` }}
+        />
+      );
+    })}
+  </div>
+</section>
+
           </div>
         )}
 
