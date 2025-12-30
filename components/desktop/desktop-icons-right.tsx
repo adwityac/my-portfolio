@@ -24,7 +24,7 @@ export default function DesktopIconsRight() {
           alt="Trash"
           width={48}
           height={48}
-          className="w-10 mb-1"
+          className="mb-1 w-10"
         />
         <span className="text-xs">Trash</span>
       </button>
@@ -39,7 +39,7 @@ export default function DesktopIconsRight() {
           alt="Contact Me"
           width={48}
           height={48}
-          className="w-10 mb-1"
+          className="mb-1 w-10"
         />
         <span className="text-xs">Contact Me</span>
       </button>
@@ -56,7 +56,7 @@ export default function DesktopIconsRight() {
           alt="GitHub"
           width={48}
           height={48}
-          className="w-10 mb-1"
+          className="mb-1 w-10"
         />
         <ArrowTopRightOnSquareIcon className="absolute -bottom-1 -right-1 h-4 w-4 text-white" />
         <span className="text-xs">Github</span>
