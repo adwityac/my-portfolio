@@ -41,17 +41,10 @@ const Desktop = ({}: DesktopProps) => {
         setMenu({ x: e.clientX, y: e.clientY });
       }}
     >
-      <BackgroundImage backgroundImage={backgroundImage} />
+      <BackgroundImage backgroundImage={backgroundImage}
+      brightnessLevel={brightnessLevel} />
       <Sidebar />
       <DesktopIconsRight />
-
-      {/* 🌙 Brightness overlay */}
-      <div
-        className="pointer-events-none fixed inset-0 z-[20] bg-black transition-opacity duration-300"
-        style={{
-          opacity: Math.min(0.85, 1 - brightnessLevel / 100),
-        }}
-      />
 
       {showApps && <ShowApplications />}
 

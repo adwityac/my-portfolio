@@ -5,7 +5,7 @@ interface StatusState {
   brightnessLevel: number;
 }
 
-const MIN_BRIGHTNESS = 5; // 👈 never fully black
+const MIN_BRIGHTNESS = 27; 
 
 const initialState: StatusState = {
   soundLevel: 50,
