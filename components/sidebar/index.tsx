@@ -19,7 +19,6 @@ const Sidebar = ({}: SidebarProps) => {
 
   return (
     <div className="absolute left-0 top-0 z-40 flex h-full w-auto select-none flex-col items-center border-black border-opacity-60 bg-black bg-opacity-50 pt-7 duration-300">
-      
       {/* 🔝 Top apps */}
       {sidebarApps.map((item) => (
         <Tooltip text={item.title} key={item.id} position="right">
@@ -43,8 +42,8 @@ const Sidebar = ({}: SidebarProps) => {
             className="
               flex h-11 w-11 items-center justify-center
               rounded-lg
-              hover:bg-white hover:bg-opacity-10
-              transition
+              transition hover:bg-white
+              hover:bg-opacity-10
             "
           >
             <Grid />

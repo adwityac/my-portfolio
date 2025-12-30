@@ -25,37 +25,65 @@ export default function ContextMenu({ x, y, onClose }: Props) {
       style={{ top: y, left: x }}
       onContextMenu={(e) => e.preventDefault()}
     >
-      <MenuItem emoji="⭐" text="Star this Project" onClick={() => {
-        window.open('https://github.com/adwityac/my-portfolio', '_blank');
-        onClose();
-      }} />
+      <MenuItem
+        emoji="⭐"
+        text="Star this Project"
+        onClick={() => {
+          window.open('https://github.com/adwityac/my-portfolio', '_blank');
+          onClose();
+        }}
+      />
 
-      <MenuItem emoji="❗" text="Report bugs" onClick={() => {
-        window.open('https://github.com/adwityac/my-portfolio/issues', '_blank');
-        onClose();
-      }} />
+      <MenuItem
+        emoji="❗"
+        text="Report bugs"
+        onClick={() => {
+          window.open(
+            'https://github.com/adwityac/my-portfolio/issues',
+            '_blank',
+          );
+          onClose();
+        }}
+      />
 
-      <MenuItem emoji="🤝" text="Follow on LinkedIn" onClick={() => {
-        window.open('https://linkedin.com/in/adwityac', '_blank');
-        onClose();
-      }} />
+      <MenuItem
+        emoji="🤝"
+        text="Follow on LinkedIn"
+        onClick={() => {
+          window.open('https://linkedin.com/in/adwityac', '_blank');
+          onClose();
+        }}
+      />
 
-      <MenuItem emoji="🐙" text="Follow on Github" onClick={() => {
-        window.open('https://github.com/adwityac', '_blank');
-        onClose();
-      }} />
+      <MenuItem
+        emoji="🐙"
+        text="Follow on Github"
+        onClick={() => {
+          window.open('https://github.com/adwityac', '_blank');
+          onClose();
+        }}
+      />
 
       <hr className="my-1 border-gray-700" />
 
-      <MenuItem emoji="📝" text="Contact Me" onClick={() => {
-        dispatch(openAppByTitle('contact-me'));
-        onClose();
-      }} />
+      <MenuItem
+        emoji="📝"
+        text="Contact Me"
+        onClick={() => {
+          dispatch(openAppByTitle('contact-me'));
+          onClose();
+        }}
+      />
 
-      <MenuItem emoji="🧹" text="Reset Ubuntu" danger onClick={() => {
-        localStorage.clear();
-        window.location.reload();
-      }} />
+      <MenuItem
+        emoji="🧹"
+        text="Reset Ubuntu"
+        danger
+        onClick={() => {
+          localStorage.clear();
+          window.location.reload();
+        }}
+      />
     </div>
   );
 }

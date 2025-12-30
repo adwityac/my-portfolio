@@ -81,7 +81,7 @@ export const ShowApplications = () => {
                 height={64}
                 className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
               />
-              <span className="text-xs sm:text-sm leading-tight">
+              <span className="text-xs leading-tight sm:text-sm">
                 {app.title}
               </span>
             </div>

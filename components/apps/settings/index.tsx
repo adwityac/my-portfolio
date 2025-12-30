@@ -16,7 +16,6 @@ import {
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { setImage } from '@/redux/features/background-image-slice';
 
-
 const sections = [
   { name: 'Display', icon: <Monitor size={18} /> },
   { name: 'Sound', icon: <Volume2 size={18} /> },
@@ -43,15 +42,13 @@ const wallpapers = [
   'wall-8.webp',
 ];
 
-
 export const Settings = () => {
   const [active, setActive] = useState('Appearance');
 
   const dispatch = useAppDispatch();
-const currentWallpaper = useAppSelector(
-  (state) => state.backgroundImage.backgroundImage
-);
-
+  const currentWallpaper = useAppSelector(
+    (state) => state.backgroundImage.backgroundImage,
+  );
 
   return (
     <div className="flex h-full w-full select-none flex-col overflow-hidden rounded-lg bg-[#1E1E1E] text-gray-200 md:flex-row">
@@ -95,28 +92,27 @@ const currentWallpaper = useAppSelector(
             </section>
 
             <section>
-  <h3 className="mb-2 text-lg font-medium">Wallpaper</h3>
+              <h3 className="mb-2 text-lg font-medium">Wallpaper</h3>
 
-  <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-    {wallpapers.map((wall) => {
-      const path = `/images/${wall}`;
-      const isActive = currentWallpaper === path;
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                {wallpapers.map((wall) => {
+                  const path = `/images/${wall}`;
+                  const isActive = currentWallpaper === path;
 
-      return (
-        <div
-          key={wall}
-          onClick={() => dispatch(setImage(path))}
-          className={`w-[232px] h-[168px] cursor-pointer rounded-md
+                  return (
+                    <div
+                      key={wall}
+                      onClick={() => dispatch(setImage(path))}
+                      className={`h-[168px] w-[232px] cursor-pointer rounded-md
             bg-cover bg-center transition
             hover:ring-2 hover:ring-blue-500
             ${isActive ? 'ring-2 ring-blue-600' : ''}`}
-          style={{ backgroundImage: `url('${path}')` }}
-        />
-      );
-    })}
-  </div>
-</section>
-
+                      style={{ backgroundImage: `url('${path}')` }}
+                    />
+                  );
+                })}
+              </div>
+            </section>
           </div>
         )}
 

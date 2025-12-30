@@ -19,7 +19,7 @@ const Desktop = ({}: DesktopProps) => {
     (state) => state.status.brightnessLevel,
   );
 
-const [menu, setMenu] = useState<{ x: number; y: number } | null>(null);
+  const [menu, setMenu] = useState<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,39 +34,33 @@ const [menu, setMenu] = useState<{ x: number; y: number } | null>(null);
   }
 
   return (
-  <div
-    className="relative h-screen w-screen overflow-hidden"
-
-    onContextMenu={(e) => {
-      e.preventDefault();
-      setMenu({ x: e.clientX, y: e.clientY });
-    }}
-  >
-    <BackgroundImage backgroundImage={backgroundImage} />
-    <Sidebar />
-    <DesktopIconsRight />
-    
-
-    {/* 🌙 Brightness overlay */}
     <div
-      className="pointer-events-none fixed inset-0 z-[20] bg-black transition-opacity duration-300"
-      style={{
-        opacity: Math.min(0.85, 1 - brightnessLevel / 100),
+      className="relative h-screen w-screen overflow-hidden"
+      onContextMenu={(e) => {
+        e.preventDefault();
+        setMenu({ x: e.clientX, y: e.clientY });
       }}
-    />
+    >
+      <BackgroundImage backgroundImage={backgroundImage} />
+      <Sidebar />
+      <DesktopIconsRight />
 
-    {showApps && <ShowApplications />}
-
-    {/* 🖱️ Right-click context menu */}
-    {menu && (
-      <ContextMenu
-        x={menu.x}
-        y={menu.y}
-        onClose={() => setMenu(null)}
+      {/* 🌙 Brightness overlay */}
+      <div
+        className="pointer-events-none fixed inset-0 z-[20] bg-black transition-opacity duration-300"
+        style={{
+          opacity: Math.min(0.85, 1 - brightnessLevel / 100),
+        }}
       />
-    )}
-  </div>
-);
+
+      {showApps && <ShowApplications />}
+
+      {/* 🖱️ Right-click context menu */}
+      {menu && (
+        <ContextMenu x={menu.x} y={menu.y} onClose={() => setMenu(null)} />
+      )}
+    </div>
+  );
 };
 
 export { Desktop };

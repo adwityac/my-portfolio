@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-
 interface BackgroundImageState {
   backgroundImage: string;
 }
@@ -18,7 +17,6 @@ export const backgroundImage = createSlice({
     },
   },
 });
-
 
 export const { setImage } = backgroundImage.actions;
 export default backgroundImage.reducer;
