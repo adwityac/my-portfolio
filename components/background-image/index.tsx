@@ -5,21 +5,24 @@ interface BackgroundImageProps {
   brightnessLevel: number;
 }
 
-const BackgroundImage = ({ backgroundImage,brightnessLevel, }: BackgroundImageProps) => {
+const BackgroundImage = ({
+  backgroundImage,
+  brightnessLevel,
+}: BackgroundImageProps) => {
   const minSliderValue = 27;
   const maxSliderValue = 100;
-  const minBrightness = 1.54; 
-  const maxBrightness = 2.0; 
+  const minBrightness = 1.54;
+  const maxBrightness = 2.0;
 
   const clampedLevel = Math.max(brightnessLevel, minSliderValue);
 
-  
-  const normalizedValue = (clampedLevel - minSliderValue) / (maxSliderValue - minSliderValue);
-  const brightness = minBrightness + (normalizedValue * (maxBrightness - minBrightness));
+  const normalizedValue =
+    (clampedLevel - minSliderValue) / (maxSliderValue - minSliderValue);
+  const brightness =
+    minBrightness + normalizedValue * (maxBrightness - minBrightness);
 
   console.log('🔆 Brightness level from Redux:', brightnessLevel);
   console.log('🔆 Calculated filter brightness:', brightness);
-  
 
   return (
     <div
@@ -35,7 +38,5 @@ const BackgroundImage = ({ backgroundImage,brightnessLevel, }: BackgroundImagePr
     ></div>
   );
 };
-
-
 
 export { BackgroundImage };

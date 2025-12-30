@@ -41,8 +41,10 @@ const Desktop = ({}: DesktopProps) => {
         setMenu({ x: e.clientX, y: e.clientY });
       }}
     >
-      <BackgroundImage backgroundImage={backgroundImage}
-      brightnessLevel={brightnessLevel} />
+      <BackgroundImage
+        backgroundImage={backgroundImage}
+        brightnessLevel={brightnessLevel}
+      />
       <Sidebar />
       <DesktopIconsRight />
 
