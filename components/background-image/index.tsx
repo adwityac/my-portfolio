@@ -21,8 +21,6 @@ const BackgroundImage = ({
   const brightness =
     minBrightness + normalizedValue * (maxBrightness - minBrightness);
 
-  console.log('🔆 Brightness level from Redux:', brightnessLevel);
-  console.log('🔆 Calculated filter brightness:', brightness);
 
   return (
     <div
