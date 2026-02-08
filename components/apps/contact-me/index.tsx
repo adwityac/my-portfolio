@@ -44,7 +44,7 @@ export function ContactMe() {
           <span className={styles.lineNumber}>2</span>
           <input
             type="text"
-            placeholder="subject (may be a feedback for this website!)"
+            placeholder="Subject (may be a feedback for this website!)"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
           />

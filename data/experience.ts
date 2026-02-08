@@ -3,7 +3,7 @@ import _ from 'lodash';
 export const experience = [
   {
     id: _.uniqueId(),
-    timeline: 'Jul 2025 - Present',
+    timeline: 'Jul 2025 - Nov 2025',
     company: 'DRDO',
     url: 'https://www.drdo.gov.in/drdo/',
     position: 'Project Intern',
